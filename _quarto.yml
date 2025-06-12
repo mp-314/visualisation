@@ -1,5 +1,3 @@
----
-title: "_quarto"
-format: html
----
-
+project: 
+  title: "VisWeb"
+  output-dir: docs/

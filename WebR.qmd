@@ -12,7 +12,6 @@ webr:
     - ggplot2
 ---
 
-
 ```{r setup, include=FALSE}
 # Load necessary packages
 library(ggplot2)
@@ -27,9 +26,11 @@ In this exercise, you'll use WebR to perform a simple analysis of the `mtcars` a
 
 Fit a linear regression model that predicts **miles per gallon (`mpg`)** using **horsepower (`hp`)** from the `mtcars` dataset. Then interpret the results.
 
-```{webr-r}
+```{web-r}
+
+
 # Your code here: fit the model
-model_hp <- lm(____ ~ ____, data = mtcars)
+model_hp <- lm(mpg ~ hp, data = mtcars)
 
 # View the summary
 summary(model_hp)
@@ -37,18 +38,18 @@ summary(model_hp)
 
 **Questions:**
 
-1. Is horsepower a statistically significant predictor of MPG?
-2. What does the coefficient of `hp` tell you about its relationship with `mpg`?
+1.  Is horsepower a statistically significant predictor of MPG?
+2.  What does the coefficient of `hp` tell you about its relationship with `mpg`?
 
----
+------------------------------------------------------------------------
 
 ## Task 2: Visualization with `mpg` Dataset
 
 Create a scatter plot of **city MPG (`cty`)** vs. **engine displacement (`displ`)** using the `mpg` dataset. Color the points by the number of cylinders (`cyl`).
 
-```{webr-r}
+```{web-r}
 # Your code here: make the plot
-ggplot(data = mpg, aes(x = ____, y = ____, color = ____)) +
+ggplot(data = mpg, aes(x = cty, y = displ, color = cyl)) +
   geom_point(size = 3) +
   labs(title = "City MPG and Engine Displacement",
        subtitle = "Colored by number of cylinders")
@@ -56,10 +57,10 @@ ggplot(data = mpg, aes(x = ____, y = ____, color = ____)) +
 
 **Questions:**
 
-1. Describe the overall trend between `displ` and `cty`.
-2. What does the color mapping tell you about the cylinder count and efficiency?
+1.  Describe the overall trend between `displ` and `cty`.
+2.  What does the color mapping tell you about the cylinder count and efficiency?
 
----
+------------------------------------------------------------------------
 
 ## Task 3 (Optional): Try Your Own Model
 
